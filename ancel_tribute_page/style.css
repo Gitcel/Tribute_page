@@ -1,0 +1,377 @@
+:root
+{
+    --text-shadow-blue: 2px 1px 0 rgb(200, 215, 255);
+    --text-shadow-link-select: 
+        #FFF 0px 0px 5px,
+        #FFF 0px 0px 10px,
+        #FFF 0px 0px 15px,
+        #FF2D95 0px 0px 20px,
+        #FF2D95 0px 0px 30px,
+        #FF2D95 0px 0px 40px,
+        #FF2D95 0px 0px 50px,
+        #FF2D95 0px 0px 75px;
+    --name_light_up_text_shadow: 
+        #FFF 0px 0px 5px,
+        #FFF 0px 0px 10px,
+        #FFF 0px 0px 15px,
+        #FF2D95 0px 0px 20px,
+        #FF2D95 0px 0px 30px,
+        #FF2D95 0px 0px 40px,
+        #FF2D95 0px 0px 50px,
+        #FF2D95 0px 0px 75px;
+    --text-shadow-achievements-blur: 
+        #FFF 0px 0px 5px,
+        #FFF 0px 0px 10px,
+        #FFF 0px 0px 15px,
+        rgb(255, 240, 240) 0px 0px 20px,
+        rgb(255, 240, 240) 0px 0px 30px,
+        rgb(255, 240, 240) 0px 0px 40px,
+        rgb(255, 240, 240) 0px 0px 50px,
+        rgb(255, 240, 240) 0px 0px 75px;
+}
+
+body
+{
+    background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    background-color: rgba(20, 20, 20, 1);
+    background: linear-gradient(
+        90deg, rgba(7,7,10,1) 56%,
+        rgba(60,59,78,1) 66%,
+        rgba(214,200,202,1) 85%,
+        rgba(255,238,239,1) 91%,
+        rgba(255,237,238,1) 97%,
+        rgba(255,238,238,1) 100%
+    );    
+}
+
+.container-main
+{
+    position: relative;        
+}
+
+@keyframes start-fade
+{
+    0% {filter: blur(1em);opacity: 0.2;}
+    100% {filter: blur(0em);opacity: 1;}
+}
+
+#img-3-id
+{
+    position: absolute;
+    top: -180px;
+    left: -160px;
+    opacity: 0;
+    animation-name: img-3-id;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+    animation-direction: normal;
+    transition-duration: 6s;
+}
+
+@keyframes img-3-id
+{
+    0% {opacity: 0.5}
+    10% {opacity: 0}
+    20% {opacity: 0}
+    30% {opacity: 0}
+    40% {opacity: 0}
+    50% {opacity: 0}
+    60% {opacity: 0}
+    70% {opacity: 0.5}
+    80% {opacity: 1}
+    90% {opacity: 1}
+    100% {opacity: 1}
+}
+
+#img-2-id
+{
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    animation-name: img-2-id;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+    transition-duration: 6s;
+}
+
+@keyframes img-2-id
+{
+    0% {opacity: 0}
+    10% {opacity: 0}
+    20% {opacity: 0}
+    30% {opacity: 0.5}
+    40% {opacity: 1}
+    50% {opacity: 1}
+    60% {opacity: 1}
+    70% {opacity: 0.5}
+    80% {opacity: 0}
+    90% {opacity: 0}
+    100% {opacity: 0}
+}
+
+#img-1-id
+{
+    position: absolute;
+    opacity: 0;    
+    left: -10px;
+    top: 0px;
+    animation-name: img-1-id;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 40s;
+    transition-duration: 6s;    
+}
+
+@keyframes img-1-id
+{
+    0% {opacity: 0.5}
+    10% {opacity: 1}
+    20% {opacity: 1}
+    30% {opacity: 1}
+    40% {opacity: 0.5}
+    50% {opacity: 0}
+    60% {opacity: 0}
+    70% {opacity: 0}
+    80% {opacity: 0}
+    90% {opacity: 0}
+    100% {opacity: 0}
+}
+
+.container-introduction
+{
+    position: absolute;
+    left: 900px; 
+    font-family: "Marck Script";            
+}
+
+#name-id
+{
+    font-size: 60px;
+    text-shadow: 2px 2px 0 rgba(20, 0, 150, 1);
+    animation: name_light_up 6s ease-out, name_light_up_infinite 40s linear infinite;
+    -webkit-animation: name_light_up 6s ease-out, name_light_up_infinite 40s linear infinite;
+    -moz-animation: name_light_up 6s ease-out, name_light_up_infinite 40s linear infinite;
+}
+
+@keyframes name_light_up {
+
+    0% {
+        opacity: 0;
+        filter: brightness(0.5);
+    }
+
+    20% {
+        opacity: 0.6;
+        color: rgba(190, 190, 255, 1);
+        text-shadow: var(--name_light_up_text_shadowfilter);
+        filter: brightness(6);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+        text-shadow: 2px 2px 0 rgba(20, 0, 150, 1);
+    }
+
+}
+
+@keyframes name_light_up_infinite {
+
+    0% {filter: brightness(1);}
+    40% {text-shadow: 2px 2px 0 rgb(208, 230, 255);}
+    100% {filter: brightness(1);}
+
+}
+
+#name-id:hover
+{
+    cursor: context-menu;
+}
+
+#years-id
+{
+    font-size: 40px;
+    text-shadow: var(--text-shadow-blue);
+    animation-name: start_fade;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transition-duration: 4s; 
+}
+
+#description-id
+{
+    position: absolute;
+    font-size: 30px;
+    left: -100px;
+    text-shadow: var(--text-shadow-blue);
+    animation-name: start_fade;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transition-duration: 4s; 
+}
+
+@keyframes start_fade {
+
+    0% {
+        opacity: 0;
+        filter: blur(6rem);
+    }
+
+    40% {
+        opacity: 0.7;
+        filter: blur(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0rem);
+    }
+
+}
+
+#description-id:hover
+{
+    cursor: context-menu;
+}
+
+#years-id:hover
+{
+    cursor: context-menu;
+}
+
+#achievements-id
+{
+    position: absolute;
+    left: 740px;
+    top: 800px; 
+    font-size: 30px;
+    font-family: "Marck Script";
+    text-shadow: var(--text-shadow-blue);
+    display: none;
+    animation: achievements_blur 4s ease alternate, text_color_change 20s infinite;
+    -webkit-animation: achievements_blur 4s ease alternate, text_color_change 20s infinite;
+    -moz-animation: achievements_blur 4s ease alternate, text_color_change 20s infinite;
+}
+
+@keyframes achievements_blur {
+
+    0% {
+        display: none;
+        filter: blur(6rem);
+        text-shadow: var(--text-shadow-achievements-blur);
+    }
+
+    40% {
+        display: block;
+        filter: blur(2rem);
+    }
+
+    100% {
+        display: block;
+        filter: blur(0rem);
+    }
+
+}
+
+@keyframes text_color_change {
+
+    0% {text-shadow: 2px 1px 0 rgb(200, 215, 255)}
+    100% {text-shadow: 2px 1px 0 rgb(170, 210, 255)}
+    0% {text-shadow: 2px 1px 0 rgb(200, 215, 255)}
+
+}
+
+#achievements-id:hover
+{
+    cursor: context-menu;
+}
+
+ul
+{
+    list-style: none;
+}
+
+li:before
+{
+    content: "o";    
+    padding-right: 40px;
+    right: 60px;
+    text-shadow: 2px 1px 0 rgb(200, 215, 255);
+}
+
+#links-id
+{
+    position: absolute;
+    left: 60px;
+    top: 750px; 
+    font-size: 30px;
+    font-family: "Marck Script";
+    text-shadow: var(--text-shadow-blue);
+    display: none;    
+}
+
+a:hover
+{
+    cursor: pointer;
+    text-shadow: var(--text-shadow-link-select);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+#button-id:hover
+{
+    cursor: pointer;
+    text-shadow: var(--text-shadow-link-select);
+    transition-duration: 1s;
+}
+
+.button-container
+{
+    position: absolute;
+    left: 900px;
+    -webkit-left: 900px;
+    -moz-left: 900px;
+    top: 732px;
+    -webkit-top: 732px;
+}
+
+#button-id
+{
+    background-color: rgba(100, 157, 204, 0);
+    border-color: rgba(100, 157, 204, 0);
+    border-radius: 20%;
+    font-family: "Marck Script";
+    font-size: 30px;
+    text-shadow: var(--text-shadow-blue);
+}
+
+.creator-container
+{
+    position: fixed;
+    left: 20px;
+    top: 820px; 
+    font-size: 20px;
+    font-family: "Marck Script";
+    color: rgba(40, 40, 40, 1);
+    animation: created_by_light_up 16s ease-out infinite;
+    animation-delay: 4s;
+}
+
+@keyframes created_by_light_up {
+
+    0% {filter: brightness(0.6);}
+
+    4% {        
+        text-shadow: var(--name_light_up_text_shadowfilter);
+        filter: brightness(9);
+    }
+
+    10% {filter: brightness(1);}
+
+    100% {filter: brightness(1);}
+
+}
